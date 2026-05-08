@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word counter</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/start.css">
+    <link rel="stylesheet" href="style/result2.css">
+    <link rel="stylesheet" href="style/mobile.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="icons/logo-small.svg">
+                <div>
+                    <h1>Typing Speed Test</h1>
+                    <p>Type as fast as you can in 60 seconds</p>
+                </div>
+            </div>
+            <div class="personal-best" id="best">
+                <img src="icons/icon-personal-best.svg" alt=""> Personal best: <span></span>
+            </div>
+        </header>
+
+        <nav class="stats-bar">
+            <div class="stats">
+                <div class="stat">WPM: <strong id="wpm"></strong></div>
+                <div class="divider">|</div>
+                <div class="stat">Accuracy: <strong id="accuracy"></strong></div>
+                <div class="divider">|</div>
+                <div class="stat">Time: <strong id="timer">0:60</strong></div>
+            </div>
+            <div class="controls">
+                <div class="control-group">
+                    <span>Difficulty:</span>
+                    <button id="easy">Easy</button>
+                    <button id="medium">Medium</button>
+                    <button id="hard" class="active">Hard</button>
+                    <select class="mobile-select" id="diff-select">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard" selected>Hard</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <span>Mode:</span>
+                    <button class="active" id="timed">Timed (60s)</button>
+                    <select class="mobile-select" id="mode-select">
+                        <option value="timed">Timed (60s)</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+
+        <main class="typing-area">
+            <div class="text-content blurred" id="text-display">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium consequatur, accusamus modi atque
+                eaque illo! Delectus, voluptate error ipsam officiis esse illo nam quisquam sed quaerat pariatur natus,
+                totam adipisci?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis dignissimos ipsam
+                placeat minus unde voluptatem at nostrum, nihil in vero. Ab provident numquam cumque. Enim odio illo
+                provident facere iste.
+            </div>
+
+            <div class="overlay" id="overlay">
+                <button id="start-btn">Start Typing Test</button>
+                <p>Or click the text and start typing</p>
+            </div>
+        </main>
+    </div>
+    <input id="hidden-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script type="module" src="scripts/script.js"></script>
+</body>
+
+</html>
