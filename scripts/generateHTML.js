@@ -6,7 +6,7 @@ import {
   diffBtns,
   startTest,
 } from "./script.js";
-import { startTyping, wpmDisplay, accuracyDisplay } from "./typing.js";
+import { startTyping} from "./typing.js";
 
 export const typingArea = document.querySelector(".typing-area");
 
